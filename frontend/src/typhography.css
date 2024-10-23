@@ -1,0 +1,16 @@
+* {
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+}
+
+.nunito-sans-300 {
+  font-weight: 300;
+}
+
+.nunito-sans-600 {
+  font-weight: 600;
+}
+
+.nunito-sans-800 {
+  font-weight: 800;
+}
