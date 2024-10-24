@@ -1,11 +1,12 @@
+import GridCountries from './components/gridCountries';
 import './index.css';
 import './typhography.css';
 
 function App() {
   return (
-    <>
-      <p className="nunito-sans-800">hola mundo!</p>
-    </>
+    <div className='background-[#fafafa]'>
+      <GridCountries />
+    </div>
   );
 }
 
