@@ -1,12 +1,16 @@
 import GridCountries from './components/gridCountries';
+import Navbar from './components/navbar';
 import './index.css';
 import './typhography.css';
 
 function App() {
   return (
-    <div className='background-[#fafafa]'>
-      <GridCountries />
-    </div>
+    <>
+      <Navbar />
+      <div className='background-[#fafafa]'>
+        <GridCountries />
+      </div>
+    </>
   );
 }
 
