@@ -2,7 +2,7 @@ import MoonIcon from '../assets/moon-regular.svg';
 
 const Navbar = () => {
   return (
-    <div className='h-20 flex flex-row justify-between items-center px-4 sm:px-20 shadow-xl'>
+    <div className='h-20 flex flex-row justify-between items-center px-4 sm:px-20 shadow-md'>
       <p className='nunito-sans-800 text-[#111517] text-sm sm:text-2xl leading-5'>
         Where in the world?
       </p>
