@@ -20,7 +20,7 @@ function App() {
       gap={"20px"}
       className="min-h-screen bg-[color:var(--bg)] transition-colors duration-300"
     >
-      <Title className="!text-[color:var(--text)]">Hola mundo!</Title>
+      <Title>Hola mundo!</Title>
       <Switch
         checked={darkMode}
         onChange={toggleDarkMode}
