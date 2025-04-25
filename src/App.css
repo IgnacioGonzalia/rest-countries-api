@@ -1,1 +1,15 @@
 @import "tailwindcss";
+
+:root {
+  --bg: #FAFAFA;
+  --component-bg: #FFF;
+  --text: #111517;
+  --placeholder: #C4C4C4;
+}
+
+[data-theme="dark"] {
+  --bg: #202C36;
+  --component-bg: #2B3844;
+  --text: #FFF;
+  --placeholder: #FFF;
+}
