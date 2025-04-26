@@ -1,11 +1,11 @@
-import { Button, Flex, Typography } from "antd";
+import { Button, Flex, Typography, Image } from "antd";
 import { useThemeStore } from "../store/themeStore";
 import MoonIcon from "../assets/moon-icon.svg";
 import FilledMoonIcon from "../assets/filled-moon-icon.svg";
 
 const Navbar = () => {
   const { darkMode, toggleDarkMode } = useThemeStore();
-  const { Title } = Typography;
+  const { Title, Text } = Typography;
   const Icon = darkMode ? FilledMoonIcon : MoonIcon;
 
   return (
@@ -24,8 +24,14 @@ const Navbar = () => {
         className="hover:!bg-transparent active:!bg-transparent"
       >
         <Flex align="center" justify="center" gap={"8px"}>
-          <img src={Icon} alt="Toggle" className="w-4 h-4 lg:w-5 lg:h-5" />
-          <p className="text-xs lg:text-base">Dark Mode</p>
+          <Image
+            src={Icon}
+            width={16}
+            height={16}
+            alt="Toggle"
+            className="lg:!w-5 lg:!h-5"
+          />
+          <Text className="!text-xs lg:!text-base">Dark Mode</Text>
         </Flex>
       </Button>
     </Flex>
