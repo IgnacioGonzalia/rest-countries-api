@@ -13,3 +13,7 @@
   --text: #FFF;
   --placeholder: #FFF;
 }
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+}
