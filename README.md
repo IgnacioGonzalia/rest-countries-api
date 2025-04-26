@@ -73,11 +73,11 @@ src/
 ## ✅ Estado del desarrollo
 
 - [x] Setup inicial + dependencias
-- [ ] Dark mode con Zustand
-- [ ] Clases base y componentes generales
-- [ ] Navbar con cambio de tema
-- [ ] Card de país
-- [ ] Grid de países
+- [x] Dark mode con Zustand
+- [x] Clases base y componentes generales
+- [x] Navbar con cambio de tema
+- [x] Card de país
+- [x] Grid de países
 - [ ] Búsqueda por nombre
 - [ ] Filtro por región
 - [ ] Página de país (React Router)
