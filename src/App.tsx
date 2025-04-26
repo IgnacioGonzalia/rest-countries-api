@@ -1,7 +1,8 @@
 import { useEffect } from "react";
-import "./App.css";
-import Navbar from "./components/NavBar";
 import { useThemeStore } from "./store/themeStore";
+import Navbar from "./components/NavBar";
+import CountryCard from "./components/CountryCard";
+import "./App.css";
 
 function App() {
   const { darkMode } = useThemeStore();
@@ -16,6 +17,7 @@ function App() {
   return (
     <div className="min-h-screen bg-[color:var(--bg)] transition-colors duration-300">
       <Navbar />
+      <CountryCard />
     </div>
   );
 }
