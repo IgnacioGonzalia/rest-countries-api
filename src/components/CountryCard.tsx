@@ -1,10 +1,11 @@
 import { Flex, Typography, Image } from "antd";
-import countriesData from "../data/data.json";
 
-const CountryCard = () => {
-  const data = countriesData;
+interface CountryCardProps {
+  country: any; // después podemos reemplazar `any` por tu `Country` interface
+}
+
+const CountryCard = ({ country }: CountryCardProps) => {
   const { Title, Text } = Typography;
-  const country = data[0];
 
   const printData = (data: string) => {
     const mappings: { [key: string]: any } = {
@@ -25,7 +26,7 @@ const CountryCard = () => {
       align="center"
       justify="center"
       vertical
-      className="!mt-10 !mx-auto w-[264px] bg-[color:var(--component-bg)] rounded-[5px] shadow-xl"
+      className="w-[260px] bg-[color:var(--component-bg)] rounded-[5px] shadow-xl"
     >
       <Image
         src={country.flag}

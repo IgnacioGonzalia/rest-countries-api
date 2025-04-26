@@ -9,32 +9,34 @@ const Navbar = () => {
   const Icon = darkMode ? FilledMoonIcon : MoonIcon;
 
   return (
-    <Flex
-      align="center"
-      justify="space-between"
-      className="w-full bg-[color:var(--component-bg)] shadow-lg !px-4 !py-7 md:!px-20 md:!py-6"
-    >
-      <Title className="!text-[color:var(--text)] !mb-0 !font-extrabold !tracking-wide !text-[14px] lg:!text-2xl">
-        Where in the world?
-      </Title>
-
-      <Button
-        type="text"
-        onClick={toggleDarkMode}
-        className="hover:!bg-transparent active:!bg-transparent"
+    <div className="w-full bg-[color:var(--component-bg)] shadow-lg">
+      <Flex
+        align="center"
+        justify="space-between"
+        className="max-w-7xl !mx-auto !px-4 !py-7 md:!py-6"
       >
-        <Flex align="center" justify="center" gap={"8px"}>
-          <Image
-            src={Icon}
-            width={16}
-            height={16}
-            alt="Toggle"
-            className="lg:!w-5 lg:!h-5"
-          />
-          <Text className="!text-xs lg:!text-base">Dark Mode</Text>
-        </Flex>
-      </Button>
-    </Flex>
+        <Title className="!text-[color:var(--text)] !mb-0 !font-extrabold !tracking-wide !text-[14px] lg:!text-2xl">
+          Where in the world?
+        </Title>
+
+        <Button
+          type="text"
+          onClick={toggleDarkMode}
+          className="hover:!bg-transparent active:!bg-transparent"
+        >
+          <Flex align="center" justify="center" gap={"8px"}>
+            <Image
+              src={Icon}
+              width={16}
+              height={16}
+              alt="Toggle"
+              className="lg:!w-5 lg:!h-5"
+            />
+            <Text className="!text-xs lg:!text-base">Dark Mode</Text>
+          </Flex>
+        </Button>
+      </Flex>
+    </div>
   );
 };
 

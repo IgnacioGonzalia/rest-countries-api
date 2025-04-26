@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useThemeStore } from "./store/themeStore";
 import Navbar from "./components/NavBar";
-import CountryCard from "./components/CountryCard";
+import CountryGrid from "./components/CountryGrid";
 import "./App.css";
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
   return (
     <div className="min-h-screen bg-[color:var(--bg)] transition-colors duration-300">
       <Navbar />
-      <CountryCard />
+      <CountryGrid />
     </div>
   );
 }
