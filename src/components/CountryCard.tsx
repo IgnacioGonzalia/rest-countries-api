@@ -11,7 +11,7 @@ const CountryCard = ({ country }: CountryCardProps) => {
     const mappings: { [key: string]: any } = {
       Population: country.population.toLocaleString(),
       Region: country.region,
-      Capital: country.capital,
+      Capital: country.capital ?? "-",
     };
     return (
       <Text className="!text-sm !font-semibold">

@@ -17,3 +17,7 @@
 body {
   font-family: 'Nunito Sans', sans-serif;
 }
+
+.ant-input-affix-wrapper .ant-input-prefix {
+  margin-right: 26px;
+}

@@ -30,6 +30,7 @@ const Navbar = () => {
               width={16}
               height={16}
               alt="Toggle"
+              preview={false}
               className="lg:!w-5 lg:!h-5"
             />
             <Text className="!text-xs lg:!text-base">Dark Mode</Text>

@@ -11,6 +11,7 @@ createRoot(document.getElementById("root")!).render(
         token: {
           fontFamily: "'Nunito Sans', sans-serif",
           colorText: "var(--text)",
+          colorTextPlaceholder: "var(--placeholder)",
         },
       }}
     >
