@@ -1,4 +1,4 @@
-import { Dropdown } from "antd";
+import { Dropdown, MenuProps } from "antd";
 import { DownOutlined } from "@ant-design/icons";
 
 interface DropdownSearchProps {
@@ -17,7 +17,7 @@ const regions = [
   ALL_COUNTRIES,
 ];
 
-const items: any = regions.map((region: string) => ({
+const items: MenuProps["items"] = regions.map((region: string) => ({
   key: region,
   label: <span className="text-xs">{region}</span>,
 }));
@@ -39,7 +39,7 @@ const DropdownSearch = ({ region, setRegion }: DropdownSearchProps) => {
         },
       }}
     >
-      <button className="!w-52 !bg-[color:var(--component-bg)] text-[color:var(--text)] px-6 py-3 rounded-[5px] shadow-xl text-xs flex items-center justify-between cursor-pointer">
+      <button className="!w-52 !bg-[color:var(--component-bg)] text-[color:var(--text)] px-6 py-3 rounded-[5px] shadow-xl text-xs flex items-center justify-between cursor-pointer md:!py-[18px]">
         {region !== "" ? region : "Filter by Region"}
         <DownOutlined />
       </button>

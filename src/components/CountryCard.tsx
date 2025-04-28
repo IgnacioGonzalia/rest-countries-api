@@ -1,7 +1,8 @@
 import { Flex, Typography, Image } from "antd";
+import { Country } from "../interfaces/Country";
 
 interface CountryCardProps {
-  country: any; // después podemos reemplazar `any` por tu `Country` interface
+  country: Country;
 }
 
 const CountryCard = ({ country }: CountryCardProps) => {
@@ -9,7 +10,10 @@ const CountryCard = ({ country }: CountryCardProps) => {
 
   const printData = (data: string) => {
     const mappings: { [key: string]: any } = {
-      Population: country.population.toLocaleString(),
+      Population:
+        country.population !== undefined
+          ? country.population.toLocaleString()
+          : "-",
       Region: country.region,
       Capital: country.capital ?? "-",
     };
@@ -29,7 +33,7 @@ const CountryCard = ({ country }: CountryCardProps) => {
       className="w-[260px] bg-[color:var(--component-bg)] rounded-[5px] shadow-xl"
     >
       <Image
-        src={country.flag}
+        src={country.flags.svg}
         alt={`${country.name} flag`}
         className="!rounded-t-[5px]"
       />

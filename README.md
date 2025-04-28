@@ -78,8 +78,8 @@ src/
 - [x] Navbar con cambio de tema
 - [x] Card de país
 - [x] Grid de países
-- [ ] Búsqueda por nombre
-- [ ] Filtro por región
+- [x] Búsqueda por nombre
+- [x] Filtro por región
 - [ ] Página de país (React Router)
 - [ ] AGG: Skeleton loader
 - [ ] AGG: Traducción i18n
