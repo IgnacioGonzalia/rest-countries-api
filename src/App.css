@@ -21,3 +21,9 @@ body {
 .ant-input-affix-wrapper .ant-input-prefix {
   margin-right: 26px;
 }
+
+.ant-dropdown-menu {
+  background-color: var(--component-bg) !important;
+  color: var(--text) !important;
+  box-shadow: none !important;
+}

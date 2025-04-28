@@ -3,7 +3,7 @@ import { useThemeStore } from "../store/themeStore";
 import MoonIcon from "../assets/moon-icon.svg";
 import FilledMoonIcon from "../assets/filled-moon-icon.svg";
 
-const Navbar = () => {
+const Navbar = ({ clearFilters }: { clearFilters: () => void }) => {
   const { darkMode, toggleDarkMode } = useThemeStore();
   const { Title, Text } = Typography;
   const Icon = darkMode ? FilledMoonIcon : MoonIcon;
@@ -15,7 +15,10 @@ const Navbar = () => {
         justify="space-between"
         className="max-w-7xl !mx-auto !px-4 !py-7 md:!py-6"
       >
-        <Title className="!text-[color:var(--text)] !mb-0 !font-extrabold !tracking-wide !text-[14px] lg:!text-2xl">
+        <Title
+          className="!text-[color:var(--text)] !mb-0 !font-extrabold !tracking-wide !text-[14px] lg:!text-2xl cursor-pointer"
+          onClick={clearFilters}
+        >
           Where in the world?
         </Title>
 

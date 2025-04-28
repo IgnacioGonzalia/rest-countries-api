@@ -4,17 +4,19 @@ import IconSearch from "../assets/search-icon-gray.svg";
 import IconSearchDark from "../assets/search-icon-white.svg";
 
 interface InputSearchProps {
+  inputValue: string;
   setInputValue: (value: string) => void;
 }
 
-const InputSearch = ({ setInputValue }: InputSearchProps) => {
+const InputSearch = ({ inputValue, setInputValue }: InputSearchProps) => {
   const { darkMode } = useThemeStore();
   const Icon = darkMode ? IconSearchDark : IconSearch;
 
   return (
-    <Flex className="bg-[color:var(--component-bg)] !mt-6 !w-[343px] !mx-auto !rounded-[5px] shadow-xl">
+    <Flex className="bg-[color:var(--component-bg)] !w-[343px] !rounded-[5px] shadow-xl md:!w-md">
       <Input
         placeholder="Search for a country…"
+        value={inputValue}
         variant="borderless"
         onChange={(e) => setInputValue(e.target.value)}
         prefix={

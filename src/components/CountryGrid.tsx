@@ -8,7 +8,7 @@ const CountryGrid = ({ countries }: any) => {
       align="center"
       justify="center"
       wrap
-      className="!mx-auto !mt-8 !gap-10 !pb-10 md:!gap-[75px] max-w-7xl md:!mt-12"
+      className="!mx-auto !mt-8 !gap-10 !pb-10 !px-4 md:!gap-[75px] !max-w-7xl md:!mt-12 xl:!px-0"
     >
       {countries.map((country: any) => (
         <CountryCard country={country} key={country.alpha3Code} />
