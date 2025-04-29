@@ -59,13 +59,16 @@ npm run dev
 
 ```
 src/
+├── assets/          # Iconos utillizados en la app
 ├── components/      # Componentes reutilizables (Card, Navbar, etc.)
-├── pages/           # Vistas principales (Home, CountryDetail)
+├── data/            # Datos con los que trabajaré (simula la respuesta de un servicio)
+├── interfaces/      # Interfaz del objeto Country
+├── pages/           # Vistas principales (Home, CountryPage)
 ├── store/           # Estado global (Zustand)
 ├── locales/         # Archivos de traducción i18n
 ├── App.tsx          # Componente raíz y rutas
 ├── main.tsx         # Punto de entrada
-└── index.css        # Tailwind base
+└── App.css        # Tailwind base
 ```
 
 ---

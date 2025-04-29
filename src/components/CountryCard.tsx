@@ -1,5 +1,6 @@
 import { Flex, Typography, Image } from "antd";
 import { Country } from "../interfaces/Country";
+import { useNavigate } from "react-router-dom";
 
 interface CountryCardProps {
   country: Country;
@@ -7,6 +8,12 @@ interface CountryCardProps {
 
 const CountryCard = ({ country }: CountryCardProps) => {
   const { Title, Text } = Typography;
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    if (country?.name)
+      navigate(`/country/${encodeURIComponent(country.name.toLowerCase())}`);
+  };
 
   const printData = (data: string) => {
     const mappings: { [key: string]: any } = {
@@ -37,7 +44,13 @@ const CountryCard = ({ country }: CountryCardProps) => {
         alt={`${country.name} flag`}
         className="!rounded-t-[5px]"
       />
-      <Flex align="start" gap={16} vertical className="!p-6 !pb-11 !w-full">
+      <Flex
+        align="start"
+        gap={16}
+        vertical
+        className="!p-6 !pb-11 !w-full cursor-pointer hover:transform-view"
+        onClick={handleClick}
+      >
         <Title level={2} className="!mb-0 !text-xl !font-extrabold">
           {country.name}
         </Title>
